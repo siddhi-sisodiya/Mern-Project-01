@@ -1,12 +1,11 @@
-  require("dotenv").config()
+require("dotenv").config()
 const app=require("./src/index")
 const createDB=require("./src/database/db")
 createDB()
-app.listen(3000,()=>{
-  try{
-    console.log("server is running on 3000 port")
-  }
-  catch(error){
-    console.log("serever is not created",error)
-  }
-})
+try {
+  app.listen(3000, () => {
+    console.log("Server is running on port 3000 ")
+  })
+} catch (error) {
+  console.log("Server failed to start ", error)
+}
