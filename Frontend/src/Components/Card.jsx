@@ -9,3 +9,4 @@ function Card({ name, price, description }) {
 }
 
 export default Card;
+ 
